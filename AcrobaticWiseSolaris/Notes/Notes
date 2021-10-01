@@ -1,0 +1,8 @@
+#Git Dance
+
+git status
+git pull
+git push
+
+git commit -om "message"
+git add . 
