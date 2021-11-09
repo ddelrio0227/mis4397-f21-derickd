@@ -3,7 +3,11 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
+    if params.has_key?(:q)
+    @users = User.where("first_name LIKE ?","%" + params[:q] + "%")
+    else
     @users = User.all
+    end
   end
 
   # GET /users/1 or /users/1.json
